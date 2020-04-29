@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "ordr")
+@Table(name = "ordr")   // order is a keyword in Postgres, so we need to name table differently
 @Data
 @RequiredArgsConstructor
 @NoArgsConstructor
