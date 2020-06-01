@@ -8,9 +8,9 @@ import org.sep3.business.model.domain.Account;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class AccountDTO {
+public class RegisterDTO {
 
-    private Long id;
     private String username;
+    private String password;
     private Account.AccountType type;
 }

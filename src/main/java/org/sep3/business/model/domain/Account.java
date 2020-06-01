@@ -11,6 +11,10 @@ import javax.persistence.Id;
 @RequiredArgsConstructor
 @NoArgsConstructor
 public class Account {
+    public enum AccountType{
+
+        CUSTOMER,DJ,BARTENDER;
+    }
 
     @Id
     @GeneratedValue
@@ -18,5 +22,5 @@ public class Account {
 
     @NonNull private String username;
     @NonNull private String password;
-
+    @NonNull private AccountType type;
 }

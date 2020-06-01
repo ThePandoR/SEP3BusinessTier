@@ -32,7 +32,7 @@ public class PlaylistController {
         return ResponseEntity.of(service.vote(id));
     }
 
-    @PostMapping("/{id}/markplayed")
+    @PostMapping("/{id}/play")
     public void markPlayed(@PathVariable Long id){
 
         service.markPlayed(id);
