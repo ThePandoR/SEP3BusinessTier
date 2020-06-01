@@ -25,10 +25,10 @@ public class AccountController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<AccountDTO> login(@RequestBody LoginDTO dto){
+    public ResponseEntity<?> login(@RequestBody LoginDTO dto){
         AccountDTO res = accountService.login(dto);
         if(res == null)
-            return ResponseEntity.notFound().build();
+            return new ResponseEntity<>("Unauthorized", HttpStatus.UNAUTHORIZED);
         return ResponseEntity.ok(res);
     }
 }
