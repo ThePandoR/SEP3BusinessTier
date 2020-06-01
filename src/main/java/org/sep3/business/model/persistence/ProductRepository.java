@@ -1,4 +1,9 @@
 package org.sep3.business.model.persistence;
 
-public interface ProductRepository {
+import org.sep3.business.model.domain.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProductRepository extends JpaRepository<Product, Long> {
+
+
 }
